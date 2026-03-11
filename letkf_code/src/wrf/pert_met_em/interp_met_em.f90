@@ -81,8 +81,8 @@ PROGRAM interp_met_em
 
   int_w = ( time_tar - time_ini ) / ( time_end - time_ini )
   v3d_end = v3d_ini * ( 1.0 - int_w ) + v3d_end * int_w 
-  v2d_end = v2d_end * ( 1.0 - int_w ) + v2d_end * int_w 
-  vs3d_end= vs3d_end* ( 1.0 - int_w ) + vs3d_end* int_w 
+  v2d_end = v2d_ini * ( 1.0 - int_w ) + v2d_end * int_w 
+  vs3d_end= vs3d_ini* ( 1.0 - int_w ) + vs3d_end* int_w 
 
 
   CALL write_grd(file_tar,v3d_end,v2d_end,vs3d_end)
